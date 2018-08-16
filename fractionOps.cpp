@@ -7,6 +7,8 @@
  * load I/O operators for input and output.
  */
 
+// step zero:
+
 // step one:
 // use struct or class
 
