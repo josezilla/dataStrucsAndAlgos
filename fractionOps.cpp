@@ -36,7 +36,7 @@
 // 
 
 // name the program and compile it using this command
-// 	> gcc -o fractionOps fractionOps.cpp
+// 	> reset && gcc -o fractionOps fractionOps.cpp
 
 // run it with 
 //	> ./fractionOps
