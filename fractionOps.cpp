@@ -8,6 +8,7 @@
  */
 
 // step zero:
+// basic io
 
 // step one:
 // use struct or class
@@ -40,19 +41,30 @@
 // run it with 
 //	> ./fractionOps
 
-#include <iostream>
-using namespace std;
- 
-int main()
-{    
-    int number;
- 
-    cout << "Enter an integer: ";
-    cin >> number;
- 
-    cout << "You entered " << number;    
-    return 0;
-}
 
+#include <iostream>
+#include <string>
+using namespace std;
+
+int main ()
+{
+  int numerator;
+  int denominator;
+  string fraction;
+  
+  cout << "Enter numerator: ";
+  cin >> numerator;
+  cout << "The first value you entered is " << numerator << ".\n";
+  
+  cout << "Enter denominator: ";
+  cin >> denominator;
+  cout << "The second value you entered is " << denominator << ".\n";
+  
+  cout << "The resulting fraction is " << numerator << "/" << denominator<< ".\n";
+  
+  
+  
+  return 0;
+}
 
 	
