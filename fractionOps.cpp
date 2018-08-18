@@ -50,19 +50,48 @@ int main ()
 {
   int numerator;
   int denominator;
-  string fraction;
+  string fraction1;
+  string notFraction;
+  int operation;
   
   cout << "Enter numerator: ";
   cin >> numerator;
-  cout << "The first value you entered is " << numerator << ".\n";
+  cout << "The first value you entered was " << numerator << ".\n";
   
   cout << "Enter denominator: ";
   cin >> denominator;
-  cout << "The second value you entered is " << denominator << ".\n";
+  cout << "The second value you entered was " << denominator << ".\n";
   
-  cout << "The resulting fraction is " << numerator << "/" << denominator<< ".\n";
+  // put stuff into the fraction variable so that it is clean
+  fraction1 = "\n"+ to_string(numerator)+  "/" + to_string(denominator)+ "\n";
+  notFraction = to_string(numerator)+  "/" + to_string(denominator)+" is a whole number... try again!\n";
   
+  if (numerator!=denominator)
+  {
+	  cout << fraction1;
+  } else {
+	  cout << notFraction;
+	  }
   
+  cout << "What operation do you want to perform on these fractions?\n1. Addition\n2. Subtraction\n3. Multiplication\n4. Division\n5. Abort\n"; 
+  cin >>  operation;
+  
+  switch (operation) {
+  case 1:
+    cout << "addition\n";
+    break;
+  case 2:
+    cout << "subtraction\n";
+    break;
+  case 3:
+    cout << "multiplication\n";
+    break;
+  case 4:
+    cout << "division\n";
+    break;
+  default:
+    cout << "start again\n";
+  }
   
   return 0;
 }
