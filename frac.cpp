@@ -60,6 +60,7 @@ int main() {
 	cout << "\nsum of the two fractions: " << result << endl;
 		cout << "OR...\n";
 		cout << fraction3.numerator << "/" << fraction3.denominator << "\n";
+	
 	// subtract fracs
 	// multipy fracs
 	// divide fracs
