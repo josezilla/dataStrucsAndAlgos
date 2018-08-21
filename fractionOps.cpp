@@ -57,18 +57,19 @@ int main ()
   int operation;
   bool firstTime = true;
   
-  cout << "Enter numerator: ";
-  cin >> numerator;
-  cout << "The first value you entered was " << numerator << ".\n";
-  
-  cout << "Enter denominator: ";
-  cin >> denominator;
-  cout << "The second value you entered was " << denominator << ".\n";
-  
-  // put stuff into the fraction variable so that it is clean
-  fraction1 = "\n"+ to_string(numerator)+  "/" + to_string(denominator)+ "\n";
-  notFraction = to_string(numerator)+  "/" + to_string(denominator)+" is a whole number... try again!\n\a";
-  
+  for (int i = 0; i < 2; i++) {
+	  cout << "Enter numerator: ";
+	  cin >> numerator;
+	  cout << "The first value you entered was " << numerator << ".\n";
+	  
+	  cout << "Enter denominator: ";
+	  cin >> denominator;
+	  cout << "The second value you entered was " << denominator << ".\n";
+	  
+	  // put stuff into the fraction variable so that it is clean
+	  fraction1 = "\n"+ to_string(numerator)+  "/" + to_string(denominator)+ "\n";
+	  notFraction = to_string(numerator)+  "/" + to_string(denominator)+" is a whole number... try again!\n\a";
+    }
   if (numerator!=denominator && denominator!=1)
   {
 	  cout << fraction1;
@@ -94,7 +95,6 @@ int main ()
   } else {
 	  cout << notFraction;
 	  }
-  
   
   
   return 0;
