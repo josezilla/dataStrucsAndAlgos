@@ -52,8 +52,10 @@ int main ()
   int numerator;
   int denominator;
   string fraction1;
+  string fraction2;
   string notFraction;
   int operation;
+  bool firstTime = true;
   
   cout << "Enter numerator: ";
   cin >> numerator;
@@ -67,7 +69,7 @@ int main ()
   fraction1 = "\n"+ to_string(numerator)+  "/" + to_string(denominator)+ "\n";
   notFraction = to_string(numerator)+  "/" + to_string(denominator)+" is a whole number... try again!\n\a";
   
-  if (numerator!=denominator)
+  if (numerator!=denominator && denominator!=1)
   {
 	  cout << fraction1;
 	  cout << "What operation do you want to perform on these fractions?\n1. Addition\n2. Subtraction\n3. Multiplication\n4. Division\n5. Abort\n\n";
