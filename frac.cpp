@@ -22,12 +22,12 @@ int main() {
 	fraction2.denominator = 6;
 	
 	result = fraction1.numerator / fraction1.denominator;
-	cout << "First fraction: " << result << endl;
-	cout <<  "\n"+ to_string(int(fraction1.numerator))+  "/" + to_string(int(fraction1.denominator))+ "\n";
+	cout << "\nFirst fraction: " << result << endl;
+	cout << to_string(int(fraction1.numerator))+  "/" + to_string(int(fraction1.denominator))+ "\n";
 	
 	result = fraction2.numerator / fraction2.denominator;
-	cout << "Second fraction: " << result << endl;
-	cout <<  "\n"+ to_string(int(fraction2.numerator))+  "/" + to_string(int(fraction2.denominator))+ "\n";
+	cout << "\nSecond fraction: " << result << endl;
+	cout << to_string(int(fraction2.numerator))+  "/" + to_string(int(fraction2.denominator))+ "\n";
 
 
 	return 0;
