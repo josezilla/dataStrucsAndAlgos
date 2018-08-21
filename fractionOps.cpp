@@ -48,6 +48,7 @@ using namespace std;
 
 int main ()
 {
+
   int numerator;
   int denominator;
   string fraction1;
@@ -64,34 +65,35 @@ int main ()
   
   // put stuff into the fraction variable so that it is clean
   fraction1 = "\n"+ to_string(numerator)+  "/" + to_string(denominator)+ "\n";
-  notFraction = to_string(numerator)+  "/" + to_string(denominator)+" is a whole number... try again!\n";
+  notFraction = to_string(numerator)+  "/" + to_string(denominator)+" is a whole number... try again!\n\a";
   
   if (numerator!=denominator)
   {
 	  cout << fraction1;
+	  cout << "What operation do you want to perform on these fractions?\n1. Addition\n2. Subtraction\n3. Multiplication\n4. Division\n5. Abort\n\n";
+	  cin >>  operation;
+	  
+	  switch (operation) {
+	  case 1:
+		cout << "Addition\n";
+		break;
+	  case 2:
+		cout << "Subtraction\n";
+		break;
+	  case 3:
+		cout << "Multiplication\n";
+		break;
+	  case 4:
+		cout << "Division\n";
+		break;
+	  default:
+		cout << "Abort\n";
+	  }
   } else {
 	  cout << notFraction;
 	  }
   
-  cout << "What operation do you want to perform on these fractions?\n1. Addition\n2. Subtraction\n3. Multiplication\n4. Division\n5. Abort\n"; 
-  cin >>  operation;
   
-  switch (operation) {
-  case 1:
-    cout << "addition\n";
-    break;
-  case 2:
-    cout << "subtraction\n";
-    break;
-  case 3:
-    cout << "multiplication\n";
-    break;
-  case 4:
-    cout << "division\n";
-    break;
-  default:
-    cout << "start again\n";
-  }
   
   return 0;
 }
