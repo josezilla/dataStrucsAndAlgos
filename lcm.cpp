@@ -22,4 +22,5 @@ int main() {
     cout << "HCF = " << hcf << endl;
     return 0;
 }
-// https://www.geeksforgeeks.org/program-to-add-two-fractions/
+
+// https://www.geeksyforgeeks.org/program-to-add-two-fractions/

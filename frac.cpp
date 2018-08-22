@@ -23,6 +23,27 @@ class Fraction {
 		fraction.denominator = this->denominator;// + f.denominator;
 		return fraction;
 		}
+	// overload - operator to add two Fraction objects
+	Fraction operator-(const Fraction& f) {
+		Fraction fraction;
+		fraction.numerator = this->numerator - f.numerator;
+		fraction.denominator = this->denominator;// + f.denominator;
+		return fraction;
+		}
+	// overload * operator to add two Fraction objects
+	Fraction operator*(const Fraction& f) {
+		Fraction fraction;
+		fraction.numerator = this->numerator * f.numerator;
+		fraction.denominator = this->denominator;// + f.denominator;
+		return fraction;
+		}
+	// overload / operator to add two Fraction objects
+	Fraction operator/(const Fraction& f) {
+		Fraction fraction;
+		fraction.numerator = this->numerator / f.numerator;
+		fraction.denominator = this->denominator;// + f.denominator;
+		return fraction;
+		}
 	
 	public:
 		double numerator;
@@ -40,7 +61,7 @@ int main() {
 	fraction1.setDenominator(8);
 	
 	// fraction2 specification
-	fraction2.setNumerator (9);
+	fraction2.setNumerator (7);
 	fraction2.setDenominator(8);
 	
 	// result of fraction1
@@ -55,15 +76,31 @@ int main() {
 
 	// add fracs
 	fraction3 = fraction1 + fraction2;
-
 	result = fraction3.getFrac();
 	cout << "\nsum of the two fractions: " << result << endl;
-		cout << "OR...\n";
-		cout << fraction3.numerator << "/" << fraction3.denominator << "\n";
+	cout << "OR...\n";
+	cout << fraction3.numerator << "/" << fraction3.denominator << "\n";
 	
 	// subtract fracs
+	fraction3 = fraction1 - fraction2;
+	result = fraction3.getFrac();
+	cout << "\ndifference of the two fractions: " << result << endl;
+	cout << "OR...\n";
+	cout << fraction3.numerator << "/" << fraction3.denominator << "\n";
+		
 	// multipy fracs
+	fraction3 = fraction1 * fraction2;
+	result = fraction3.getFrac();
+	cout << "\nproduct of the two fractions: " << result << endl;
+	cout << "OR...\n";
+	cout << fraction3.numerator << "/" << fraction3.denominator << "\n";
+	
 	// divide fracs
+	fraction3 = fraction1 / fraction2;
+	result = fraction3.getFrac();
+	cout << "\nquotient of the two fractions: " << result << endl;
+	cout << "OR...\n";
+	cout << fraction3.numerator << "/" << fraction3.denominator << "\n";
 
 	return 0;
 }
