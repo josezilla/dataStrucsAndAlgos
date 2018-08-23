@@ -16,10 +16,18 @@ class Fraction {
 			denominator = denom;
 		}
 	
-	// overload + operator to add two Fraction objects
+	// overload + (plus) operator to add two Fraction objects
 	Fraction operator+(const Fraction& f) {
 		Fraction fraction;
 		fraction.numerator = ((this->numerator)*(f.denominator)) + ((f.numerator)*(this->denominator));
+		fraction.denominator = (this->denominator)*(f.denominator);
+		return fraction;
+		}
+
+	// overload - (minus) operator to add two Fraction objects
+	Fraction operator-(const Fraction& f) {
+		Fraction fraction;
+		fraction.numerator = ((this->numerator)*(f.denominator)) - ((f.numerator)*(this->denominator));
 		fraction.denominator = (this->denominator)*(f.denominator);
 		return fraction;
 		}
@@ -45,21 +53,29 @@ int main() {
 	fraction2.setNumerator(7);
 	fraction2.setDenominator(12);
 
-	
+		cout << "*************  - FRACTIONS -  *************" << endl;
 	// result of fraction1
 	result = fraction1.getFrac();
-	cout << "\nFirst fraction: " << result << endl;
+	cout << "First fraction: " << result << endl;
 	cout << fraction1.numerator << "/" << fraction1.denominator << "\n";	
 	// result of fraction2
 	result = fraction2.getFrac();
 	cout << "\nSecond fraction: " << result << endl;
 	cout << fraction2.numerator << "/" << fraction2.denominator << "\n";
 
-	
+	cout << "************* MATH OPERATIONS *************" << endl;
 	// add fracs
+	cout << "\n*****addition*****" << endl;
 	fraction3 = fraction1 + fraction2;
 	result = fraction3.getFrac();
-	cout << "\nsum of the two fractions: " << result << endl;
+	cout << "sum of the two fractions: " << result << endl;
+	cout << "OR...\n"<< fraction3.numerator << "/" << fraction3.denominator << "\n";
+	
+	// subtract fracs
+	cout << "\n***** subtraction *****" << endl;
+	fraction3 = fraction1 - fraction2;
+	result = fraction3.getFrac();
+	cout << "difference of the two fractions: " << result << endl;
 	cout << "OR...\n"<< fraction3.numerator << "/" << fraction3.denominator << "\n";
 
 
