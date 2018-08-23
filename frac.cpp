@@ -31,7 +31,22 @@ class Fraction {
 		fraction.denominator = (this->denominator)*(f.denominator);
 		return fraction;
 		}
+	// overload * (multiplication) operator to add two Fraction objects
+	Fraction operator*(const Fraction& f) {
+		Fraction fraction;
+		fraction.numerator = this->numerator * f.numerator;
+		fraction.denominator = this->denominator * f.denominator;
+		return fraction;
+		}
 	
+	// overload / (division) operator to add two Fraction objects
+	Fraction operator/(const Fraction& f) {
+		Fraction fraction;
+		fraction.numerator = this->numerator * f.denominator;
+		fraction.denominator = this->denominator * f.numerator;
+		return fraction;
+		}
+		
 	public:
 		double numerator;
 		double denominator;
@@ -47,11 +62,11 @@ int main() {
 
 	
 	// fraction1 specification.....
-	fraction1.setNumerator(9);
-	fraction1.setDenominator(8);	
+	fraction1.setNumerator(5);
+	fraction1.setDenominator(5);	
 	// fraction2 specification.....
-	fraction2.setNumerator(7);
-	fraction2.setDenominator(12);
+	fraction2.setNumerator(6);
+	fraction2.setDenominator(18);
 
 		cout << "*************  - FRACTIONS -  *************" << endl;
 	// result of fraction1
@@ -76,6 +91,20 @@ int main() {
 	fraction3 = fraction1 - fraction2;
 	result = fraction3.getFrac();
 	cout << "difference of the two fractions: " << result << endl;
+	cout << "OR...\n"<< fraction3.numerator << "/" << fraction3.denominator << "\n";
+	
+	// multiply fracs
+	cout << "\n***** multiplication *****" << endl;
+	fraction3 = fraction1 * fraction2;
+	result = fraction3.getFrac();
+	cout << "product of the two fractions: " << result << endl;
+	cout << "OR...\n"<< fraction3.numerator << "/" << fraction3.denominator << "\n";
+	
+	// divide fracs
+	cout << "\n***** division *****" << endl;
+	fraction3 = fraction1 / fraction2;
+	result = fraction3.getFrac();
+	cout << "quotient of the two fractions: " << result << endl;
 	cout << "OR...\n"<< fraction3.numerator << "/" << fraction3.denominator << "\n";
 
 
