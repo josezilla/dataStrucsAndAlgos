@@ -6,7 +6,7 @@
 
 template<class genType>
 class SinglyLinkedList {
-protected:	
+protected:	// added for compatability;
 	struct Node {
 		genType info;
 		Node *next;
@@ -19,7 +19,7 @@ public:
 	~SinglyLinkedList() { Clear(); }
 	void Clear();
 	void SetToNull()	{ head = 0; }
-	void PrintAll(std::ostream& out) const;
+	void PrintAll(std::ostream& out) const; // added for compatability;
 	genType* Find(const genType&) const;
 	void Add(const genType& el) { head = new Node(el,head); }
 	genType* Remove();			// remove the head and return its info;
